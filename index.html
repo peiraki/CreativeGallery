@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .imgs {
+            border: 2px solid black;
+            flex:1;
+            display: flex;
+            height: 100%;
+        }
+        .imgs img {
+            width:100%;
+            height: 100%;
+        }
+        .imgbox {
+            cursor: pointer;
+            flex:1;
+            overflow: hidden;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="imgs">
+        <div class="imgbox" onclick="changeCover(this)"><img src="1.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="2.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="3.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="4.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="5.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="6.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="7.jpg" ></div>
+    </div>
+    <div class="imgs">
+        <div class="imgbox" onclick="changeCover(this)"><img src="11.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="12.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="13.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="14.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="15.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="16.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="17.jpg" ></div>
+    </div>
+    <div class="imgs">
+        <div class="imgbox" onclick="changeCover(this)"><img src="8.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="9.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="10.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="18.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="19.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="20.jpg" ></div>
+        <div class="imgbox" onclick="changeCover(this)"><img src="21.jpg" ></div>
+    </div>
+</body>
+<script>
+    let imgsImg = document.querySelectorAll('.imgs .imgbox')
+
+    function changeCover(img) {
+        imgsImg.forEach(changeBorder => {
+            changeBorder.style.flex = "1"
+            changeBorder.style.border = "none"
+        })
+        img.style.flex = "10"
+        img.style.borderLeft = "5px solid black"
+        img.style.borderRight = "5px solid black"
+    }
+</script>
+</html>
